@@ -1,9 +1,12 @@
 // ---------------------------------------
 // Test Environment Setup
 // ---------------------------------------
-import expect from 'expect'
+import expect, { createSpy, spyOn, isSpy } from 'expect'
 
 global.expect = expect
+global.createSpy = createSpy
+global.spyOn = spyOn
+global.isSpy = isSpy
 
 // ---------------------------------------
 // Require Tests
