@@ -10,6 +10,9 @@ class Store {
     this._state = defaultState
     this._reducer = reducer
     this._cbs = []
+
+    this.dispatch = this.dispatch.bind(this)
+    this.getState = this.getState.bind(this)
   }
 
   /**
