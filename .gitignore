@@ -15,3 +15,4 @@ public/js
 .env
 npm-debug.log
 TODO.md
+src/js/config.js
