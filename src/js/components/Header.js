@@ -15,7 +15,7 @@ class Header extends Component {
           <h1>Search for the movies</h1>
         </div>
         <div className="col-sm-12">
-          <div className="input-group">
+          <form className="input-group" onSubmit={(ev) => this._onSearch(ev)}>
             <input
               type="text"
               className="form-control"
@@ -27,10 +27,10 @@ class Header extends Component {
               <button
                 className="btn btn-default2 btn-primary"
                 type="button"
-                onClick={() => this._onSearch()}
+                onClick={(ev) => this._onSearch(ev)}
                 >Search</button>
             </span>
-          </div>
+          </form>
         </div>
       </div>
     )
@@ -40,7 +40,8 @@ class Header extends Component {
     this.setState({searchValue: ev.target.value})
   }
 
-  _onSearch() {
+  _onSearch(ev) {
+    ev.preventDefault()
     this.props.searchBy(this.state.searchValue)
   }
 }
