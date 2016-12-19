@@ -1,0 +1,10 @@
+.search-results {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.search-results__thumbnail {
+  max-width: 60px;
+  max-height: 150px;
+  margin-right: 15px;
+}
