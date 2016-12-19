@@ -13,7 +13,7 @@ class Listing extends Component {
         <div className="col-sm-12 search-results">
           {state.items.map(item => <Item item={item} key={item.id} />)}
           {!state.isLoading && !state.items.length ? <NoResults /> : null}
-          {!state.isLoading ? <LoadMore loadMore={loadMore} /> : null}
+          {!state.isLoading && state.items.length ? <LoadMore loadMore={loadMore} /> : null}
           {state.isLoading ? <Loading /> : null}
         </div>
       </div>
