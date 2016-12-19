@@ -31,11 +31,11 @@ gulp.task('dev:scripts', function() {
             exclude: /node_modules/,
             include: __dirname,
             query: {
-              presets: ["react", "es2015"],
+              presets: ["react", "es2015", "stage-2"],
             }
           }
         ]
-      },
+      }
     }))
     .on('error', function handleError() {
       this.emit('end'); // Recover from errors
