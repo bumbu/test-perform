@@ -1,16 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Header from './Header'
+import Listing from './Listing'
 
-class App extends Component {
-  render() {
-    const { searchBy, loadMore } = this.props
+const App = (props) => {
+  const { searchBy, loadMore, state } = props
 
-    return (
-      <div className="App">
-        <button onClick={searchBy}>Action</button>
-        <img src="" className="App-logo" alt="logo" />
-      </div>
-    );
-  }
+  return (
+    <div className="container">
+      <Header searchBy={searchBy} />
+      <Listing loadMore={loadMore} state={state} />
+    </div>
+  )
 }
 
-export default App;
+App.propTypes = {
+  searchBy: React.PropTypes.func.isRequired,
+  loadMore: React.PropTypes.func.isRequired,
+  state: React.PropTypes.object.isRequired,
+}
+
+export default App
