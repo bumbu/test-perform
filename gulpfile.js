@@ -67,6 +67,11 @@ gulp.task('build:scripts', function() {
           compress: {
               warnings: false
           }
+        }),
+        new webpackStream.webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: JSON.stringify('production')
+          }
         })
       ]
     }))
