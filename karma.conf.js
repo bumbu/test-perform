@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = function (config) {
   config.set({
 
-    browsers: ['PhantomJS'], // If necessary, use 'Chrome' for debugging
+    browsers: ['Chrome'],
 
     singleRun: true,
 
