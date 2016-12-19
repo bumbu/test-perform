@@ -57,7 +57,7 @@ gulp.task('build:scripts', function() {
             exclude: /node_modules/,
             include: __dirname,
             query: {
-              presets: ["react", "es2015"],
+              presets: ["react", "es2015", "stage-2"],
             }
           }
         ]
